@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: talentmatch-ai
+    runtime: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    region: oregon
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false # Set securely in Render dashboard
+      - key: PORT
+        value: 8000
